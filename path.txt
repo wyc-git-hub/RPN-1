@@ -1,0 +1,16 @@
+RPN_Phase1_Visual/
+├── config.py                   # [配置] 适配 IDRiD 官方深层目录路径
+├── train_peripheral.py         # [训练] 训练脚本
+├── check_data.py               # [工具] 专门用于运行可视化，检查数据加载和 RSM 生成是否正确
+│
+├── models/
+│   ├── __init__.py
+│   ├── backbone.py             # U-Net Encoder
+│   ├── peripheral.py           # Peripheral Branch
+│   └── rpn_phase1.py           # Network Wrapper
+│
+├── utils/
+│   ├── __init__.py
+│   ├── dataset.py              # [核心] 适配 IDRiD 官方结构，在线生成 RSM
+│   ├── loss.py                 # Peripheral Loss
+│   └── visualization.py        # [新增] 可视化模块：绘制 Image + GT + 多尺度 RSM
